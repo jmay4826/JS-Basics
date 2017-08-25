@@ -54,6 +54,10 @@ function welcome(){
 
 
   //Answer Here
+  //Falsy:
+  // 0, NaN, false, undefined, null, ''
+
+  // Use if (value) to check if value is falsy
 
 
 
@@ -64,14 +68,20 @@ function welcome(){
 //Create a function called myName that returns your name
 
   //Code Here
+  function myName(){
+    return 'Jonathan';
+  }
   
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
+
+  //alert(newMyName());
 
 
 
@@ -82,9 +92,16 @@ function welcome(){
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn(){
+    return function(){
+      return 'Jonathan';
+    }
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+  var innerFn = outerFn();
 
 //Now invoke innerFn.
+  innerFn();
